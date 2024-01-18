@@ -53,3 +53,125 @@ Each script has purpose
 Specific purpose - For example, backup file system and database to NAS server.
 Act like a command - Each shell script is executed like any other command under Linux.
 Script code usability - Shell scripts can be extended from existing scripts. Also, you can use functions files to package frequently used tasks.
+
+
+
+
+List of command bash keywords and built in commands
+JOB_SPEC &
+(( expression ))
+. filename
+[[:]]
+[ arg... ]
+expression
+alias
+bg
+bind
+builtin
+caller
+case
+command
+compgen
+complete
+continue
+declare
+dirs
+disown
+echo
+enable
+eval
+exec
+exit
+export
+false
+fc
+fg
+for
+getopts
+hash
+help
+history
+if
+jobs
+kill
+let
+local
+logout
+popd
+printf
+pushd
+pwd
+read
+readonly
+return
+select
+set
+shift
+shopt
+source
+suspend
+test
+time
+times
+trap
+true
+type
+typeset
+ulimit
+umask
+unalias
+unset
+until
+variables
+while
+
+
+which command
+You can also use the which command to display the full path of (shell) commands:
+
+which commandname
+which bash
+Sample outputs:
+
+/bin/bash
+For each of its command line arguments it prints to stdout (screen) the full path of the executables that would have been executed when this argument had been entered at the shell prompt:
+
+which date
+which gcc
+which vi
+However, which cannot tell you exactly what the shell will execute in all cases as it is an external command. For more accurate information, use type command as follows:
+
+type -p commandName
+type -p bash
+type -p date
+type -p gcc
+type -p echo
+
+**Essential Vi Commands
+Open a file:
+vi filename
+To go into edit mode:
+press ESC and type I
+To go into command mode:
+press ESC
+To save a file
+press ESC and type :w fileName
+To save a file and quit:
+press ESC and type :wq
+OR
+
+press ESC and type :x
+To jump to a line:
+press ESC and type :the line number
+To Search for a string:
+Press ESC and type /wordToSearch
+To quit vi:
+Press ESC and type :q
+Save the following into a file called hello.sh:
+
+#!/bin/bash
+echo "Hello, World!" 
+echo "Knowledge is power."
+Save and close the file. You can run the script as follows:
+
+ ./hello.sh
